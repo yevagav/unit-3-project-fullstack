@@ -1,4 +1,4 @@
-const { Schema, model} = require('mongose')
+const { Schema, model} = require('mongoose')
 const bcrypt = require('bcrypt')
 
 const SALT_ROUNDS = 6
@@ -33,3 +33,5 @@ userSchema.pre('save', async function (next) {
     this.password = await bcrypt.hasg(this.password, SALT_ROUNDS)
     return next()
 })
+
+module.exports = model('User', userSchema)
