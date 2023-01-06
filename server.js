@@ -27,6 +27,11 @@ app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'))
 
 // routes 
 
+app.get('/api/test', (req, res) => {
+    res.json({'eureka': 'you have found it'})
+})
+
+
 app.use('*', (req,res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
