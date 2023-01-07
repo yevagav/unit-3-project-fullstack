@@ -10,6 +10,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   return (
     <main className={styles.App}>
+      <h1> Clean Cosmētika </h1>
       { user ?
         <>
           <Routes>

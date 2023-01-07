@@ -3,7 +3,7 @@ import CosmetikListItem from '../CosmetikListItem/CosmetikListItem';
 import styles from './CosmetikList.module.scss';
 
 
-export default function MenuList({ cosmetikItems, handleAddToOrder }) {
+export default function CosmetikList({ cosmetikItems, handleAddToOrder }) {
   const items = cosmetikItems.map(item =>
     <CosmetikListItem
       key={item._id}

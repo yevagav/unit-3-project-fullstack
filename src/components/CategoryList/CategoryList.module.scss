@@ -1,8 +1,9 @@
 .CategoryList {
-    color: var(--text-light);
+    color: black;
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
+    display: flex;
     }
     
     .CategoryList li {
@@ -14,8 +15,8 @@
     
     .CategoryList li:hover:not(.active) {
     cursor: pointer;
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: black;
+    color: white;
     }
     
     .CategoryList li.active {
