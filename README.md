@@ -4,6 +4,11 @@ An app for clean make up lovers to shop high end quality brands. <br />
 [Deployed App](https://cleancosmetika.herokuapp.com/) <br />
 [Trello Board](https://trello.com/b/T1BnWW3B/unit-3-project)
 
+# Design
+![](public/images/cleanapp.png)
+![](public/images/cleanapp-cart.png)
+
+
 ## Technologies Used
 HTML, JavaScript, CSS, React, Node, Express, MongoDB
 
