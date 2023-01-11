@@ -33,9 +33,7 @@ export default function NewOrderPage({ user, setUser }) {
     }
     getCart();
   }, []);
-  // Providing an empty 'dependency array'
-  // results in the effect running after
-  // the FIRST render only
+  
 
   /*-- Event Handlers --*/
   async function handleAddToOrder(itemId) {
@@ -56,12 +54,12 @@ export default function NewOrderPage({ user, setUser }) {
   return (
     <main className={styles.NewOrderPage}>
       <aside>
+      <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <CategoryList
           categories={categoriesRef.current}
           cart={setCart}
           setActiveCat={setActiveCat}
         />
-        <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <CosmetikList

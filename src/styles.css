@@ -79,8 +79,8 @@
 
   .form-container {
     padding: 3vmin;
-    background-color: var(--tan-1);
-    border: .1vmin solid black;
+    background-color: rgb(245, 245, 245);
+    border: .1vmin solid lightgray;
     border-radius: 1vmin;
   }
 
@@ -143,10 +143,12 @@
 
   button:disabled, form:invalid button[type="submit"] {
     cursor: not-allowed;
-    background-color: var(--tan-4);
+    background-color: black;
   }
 
   button[type="submit"] {
     grid-column: span 2;
     margin: 1vmin 0 0;
   }
+
+  

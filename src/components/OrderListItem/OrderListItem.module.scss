@@ -1,0 +1,20 @@
+.OrderListItem {
+   background-color: white;
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 20px;
+   padding: 20px;
+   width: 100%;
+   border-radius: 1vmin;
+}
+
+.OrderListItem .order {
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.OrderListItem .price {
+    margin-left: 45vh;
+    margin-bottom: 30px;
+}

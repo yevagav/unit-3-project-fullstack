@@ -6,9 +6,29 @@
     color: var(--text-light);
     background-color: var(--white);
     border-top: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
     font-size: 1.5vw;
+    margin-bottom: 5%;
     }
-    
+
+    .LineItem .img {
+      height: 8vw;
+      width: 8vw;
+      font-size: 5vw;
+      background-color: var(--tan-1);
+      border: .1vmin solid lightgray;
+      border-radius: 1vmin;
+      padding: 5%;
+      margin: 35%;
+    }
+
+    .LineItem .name {
+      display: flex;
+      justify-content: center;
+      margin-top: 27%;
+      margin-left: 37%;
+    }
+
     .LineItem:last-child {
     border-bottom: .1vmin solid var(--tan-3);
     }

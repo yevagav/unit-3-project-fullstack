@@ -8,7 +8,8 @@
   }
   
   .OrderDetail .sectionHeading {
-    width: 100%
+    width: 100%;
+    color: white
   }
   
   .OrderDetail .lineItemContainer {
@@ -16,6 +17,11 @@
     justify-content: flex-start;
     height: calc(100vh - 18vmin);
     width: 100%;
+  }
+
+  .lineItemContainer button:hover {
+    background-color: white;
+    color: black;
   }
   
   .OrderDetail .total {
@@ -38,10 +44,11 @@
   .OrderDetail .total span.right {
     display: flex;
     justify-content: flex-end;
+    color: white;
   }
   
-  .OrderDetail .hungry {
-    position: absolute;
-    top: 50vh;
-    font-size: 2vmin;
+  .OrderDetail .bare {
+    color: lightgray;
+    margin-top: 15%;
+    font-size: 3vh;
   }

@@ -21,11 +21,12 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
           {order.isPaid ?
             <span>ORDER <span className="smaller">{order.orderId}</span></span>
             :
-            <span>NEW ORDER</span>
+            <span>NEW ORDER &nbsp;&nbsp;</span>
           }
           <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
         </div>
         <div className={`${styles.lineItemContainer} flex-ctr-ctr flex-col scroll-y`}>
+          <h1>My Basket</h1>
           {lineItems.length ?
             <>
               {lineItems}
