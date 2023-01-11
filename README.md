@@ -13,7 +13,7 @@ An app for clean make up lovers to shop high end quality brands. <br />
 HTML, JavaScript, CSS, React, Node, Express, MongoDB
 
 ## Unsolved Problems
-
+Styling issues with the order history and cart
 
 ## Fututre Improvements 
 The user will be able to add items to favorites, a show page for each product, and a seperate page for the cart. Also, add in a payment platform for checkout like Stripe. 
