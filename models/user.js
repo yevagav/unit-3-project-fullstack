@@ -17,7 +17,8 @@ const userSchema = new Schema({
     trim: true,
     minLength: 3,
     required: true
-  }
+  },
+  beautyPref: [{ type: Schema.Types.ObjectId, ref: 'BeautyPref' }]
 }, {
   timestamps: true,
   toJSON: {
