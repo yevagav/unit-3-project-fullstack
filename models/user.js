@@ -18,7 +18,22 @@ const userSchema = new Schema({
     minLength: 3,
     required: true
   },
-  beautyPref: [{ type: Schema.Types.ObjectId, ref: 'BeautyPref' }]
+  skinType: {
+    type: String,
+    required: true
+},
+skinConcerns: {
+    type: String
+},
+skinTone: {
+    type: String
+},
+ingredientPrefer: {
+    type: String
+},
+eyeColor: {
+    type: String
+}
 }, {
   timestamps: true,
   toJSON: {

@@ -3,53 +3,67 @@ import { signUp } from '../../utilities/users-service'
 
 
 export default class SignUpForm extends Component {
-    state = {
-        name: '',
-        email: '',
-        password: '',
-        confirm: '',
-        error: ''
-    }
+  state = {
+    name: '',
+    email: '',
+    password: '',
+    confirm: '',
+    error: '',
+    skinType: '',
+    skinConcerns: '',
+    skinTone: '',
+    ingredientsPrefer: '',
+    eyeColor: ''
+  }
 
-    handleSubmit = async (evt) => {
-      evt.preventDefault()
-      try {
-        const formData = { ...this.state }
-        delete formData.error
-        delete formData.confirm
-        const user = await signUp(formData)
-        this.props.setUser(user)
-      } catch (error) {
-        this.setState({ error: 'Sign Up Failed' })
-      }
+  handleSubmit = async (evt) => {
+    evt.preventDefault()
+    try {
+      const formData = { ...this.state }
+      delete formData.error
+      delete formData.confirm
+      const user = await signUp(formData)
+      this.props.setUser(user)
+    } catch (error) {
+      this.setState({ error: 'Sign Up Failed' })
     }
+  }
 
-    handleChange = (evt) => {
-        this.setState({
-            [evt.target.name]: evt.target.value
-        })
-    }
+  handleChange = (evt) => {
+    this.setState({
+      [evt.target.name]: evt.target.value
+    })
+  }
 
-    render() {
-        const disable = this.state.password !== this.state.confirm;
-        return (
-          <div>
-            <div className="form-container">
-              <h3>Sign Up</h3>
-              <form autoComplete="off" onSubmit={this.handleSubmit}>
-                <label>Name</label>
-                <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-                <label>Email</label>
-                <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
-                <label>Password</label>
-                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-                <label>Confirm</label>
-                <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
-                <button type="submit" disabled={disable}>SIGN UP</button>
-              </form>
-            </div>
-            <p className="error-message">&nbsp;{this.state.error}</p>
-          </div>
-        );
-      }
+  render() {
+    const disable = this.state.password !== this.state.confirm;
+    return (
+      <div>
+        <div className="form-container">
+          <h3>Sign Up</h3>
+          <form autoComplete="off" onSubmit={this.handleSubmit}>
+            <label>Name</label>
+            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+            <label>Email</label>
+            <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+            <label>Password</label>
+            <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+            <label>Confirm</label>
+            <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+            <label>Skin Type:</label>
+            <input type='text' name='skinType' value={this.state.skinType} onChange={this.handleChange} />
+            <label>Skin Concerns:</label>
+            <input type='text' name='skinConcerns' value={this.state.skinConcerns} onChange={this.handleChange} />
+            <label>Skin Tone:</label>
+            <input type='text' name='skinTone' value={this.state.skinTone} onChange={this.handleChange} />
+            <label>Eye Color:</label>
+            <input type='text' name='eyeColor' value={this.state.eyeColor} onChange={this.handleChange} />
+            <button type="submit" disabled={disable}>SIGN UP</button>
+
+          </form>
+        </div>
+        <p className="error-message">&nbsp;{this.state.error}</p>
+      </div>
+    );
+  }
 }
