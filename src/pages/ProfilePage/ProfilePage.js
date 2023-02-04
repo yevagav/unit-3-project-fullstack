@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import * as itemsAPI from '../../utilities/items-api';
-import * as ordersAPI from '../../utilities/orders-api';
-import { createRoutesFromElements, Link, useNavigate } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import styles from './ProfilePage.module.scss'
 
 // ---- import components ------ //
