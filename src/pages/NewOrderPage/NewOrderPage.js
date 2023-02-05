@@ -60,6 +60,7 @@ export default function NewOrderPage({ user, setUser }) {
           cart={setCart}
           setActiveCat={setActiveCat}
         />
+        <Link to="/profile" className="button btn-sm">{user.name}'s profile</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <CosmetikList

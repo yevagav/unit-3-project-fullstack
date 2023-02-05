@@ -26,6 +26,7 @@ const dataController = {
       res.status(400).json(e)
     }
   },
+  
   async login (req, res, next) {
     try {
       const user = await User.findOne({ email: req.body.email })

@@ -17,7 +17,23 @@ const userSchema = new Schema({
     trim: true,
     minLength: 3,
     required: true
-  }
+  },
+  skinType: {
+    type: String,
+    required: true
+},
+skinConcerns: {
+    type: String
+},
+skinTone: {
+    type: String
+},
+ingredientPrefer: {
+    type: String
+},
+eyeColor: {
+    type: String
+}
 }, {
   timestamps: true,
   toJSON: {

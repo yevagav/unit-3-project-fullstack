@@ -5,6 +5,7 @@ import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import OrderList from '../../components/OrderList/OrderList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import styles from './OrderHistoryPage.module.scss';
+import ProfilePage  from '../ProfilePage/ProfilePage';
 
 export default function OrderHistoryPage({ user, setUser }) {
   /*--- State --- */
