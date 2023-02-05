@@ -19,10 +19,13 @@ export default function ProfilePage({ user, setUser }) {
                 <h2> Beauty Prefrences </h2>
             </div>
             <div className={styles.questions}>
-                <div className='beauty-form'>
+                <div className={styles.beautyCard}>
                     <div>Skin Type: {user.skinType} </div>
+                    <br />
                     <div>Skin Concerns: {user.skinConcerns}</div>
+                    <br />
                     <div>Skin Tone: {user.skinTone}</div>
+                    <br />
                     <div>Eye Color: {user.eyeColor}</div>
                 </div>
             </div>
